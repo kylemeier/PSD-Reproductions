@@ -1,0 +1,29 @@
+body {
+  background-color: #ccc; }
+
+.container {
+  position: fixed;
+  width: 225px;
+  height: 250px;
+  background-color: #383d48;
+  color: #c9d1e3;
+  border: 1px solid #181e26;
+  border-radius: 5px;
+  top: 50%;
+  margin-top: -175px;
+  left: 50%;
+  margin-left: -112.5px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 5px #181e26,-1px -1px 5px #181e26; }
+
+nav, ul {
+  height: 100%; }
+
+li {
+  line-height: 61px;
+  height: 61px;
+  padding-left: 10px;
+  border-top: 1px solid #4a4e5a;
+  border-bottom: 1px solid #1e2127; }
+  li:last-child {
+    border-bottom: none; }
