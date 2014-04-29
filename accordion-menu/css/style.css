@@ -1,15 +1,14 @@
 body {
+  font-family: 'Oxygen', 'sans-serif';
   background-color: #ccc;
-  font-size: 1em; }
+  font-size: .9em; }
 
 nav {
   position: fixed;
   width: 225px;
   height: auto;
   top: 50%;
-  margin-top: -175px;
-  left: 50%;
-  margin-left: -112.5px;
+  margin-top: -79.5px;
   border: 1px solid #181e26;
   border-radius: 5px;
   box-sizing: border-box;
@@ -19,13 +18,13 @@ ul {
   height: 100%; }
 
 li {
+  height: 38px;
   line-height: 38px;
-  vertical-align: center;
-  box-sizing: border-box;
   padding-left: 10px;
   border-top: 1px solid #4a4e5a;
   border-bottom: 1px solid #1e2127;
   text-shadow: 1px 1px #2a2d35;
+  background: -webkit-linear-gradient(#767c8a, #505666);
   background: linear-gradient(#3c414d, #353a46); }
   li:last-child {
     border-bottom: none; }
@@ -50,13 +49,14 @@ a {
 
 .message-count {
   float: right;
-  line-height: 1.9px;
-  margin-top: 9.5px;
-  margin-right: 9.5px;
-  padding: 10px;
+  line-height: 0;
+  margin: 9.5px;
+  padding: 9.5px;
   border-radius: 3px;
   color: #a8c2d8;
   text-shadow: 1px 1px #2a2d35;
+  background: -webkit-linear-gradient(#767c8a, #505666);
   background: linear-gradient(#767c8a, #505666);
   font-size: 0.6875em;
-  box-shadow: 0px 1px 3px #181e26; }
+  box-shadow: 0px 1px 3px #181e26;
+  box-sizing: border-box; }

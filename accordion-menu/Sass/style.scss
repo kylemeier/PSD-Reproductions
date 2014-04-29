@@ -1,11 +1,14 @@
-$listItemHeight: 38px;
 //http://www.premiumpixels.com/freebies/accordion-style-navigation-psd/
-//font proximanova regular
+//correct font: proximanova regular (not free), went with a Google font I like instead
 
+$listItemHeight: 38px;
+$totalHeight: 159px;
+$totalWidth: 223px;
 
 body{
+	font-family: 'Oxygen', 'sans-serif';
 	background-color:#ccc;
-	font-size:1em;
+	font-size:.9em;
 }
 
 nav{
@@ -13,9 +16,9 @@ nav{
 	width:225px;
 	height:auto;
 	top:50%;
-	margin-top:-175px;
-	left:50%;
-	margin-left:-112.5px;
+	margin-top:-$totalHeight/2;
+	// left:50%;
+	// margin-left:-$totalWidth/2;
 	border: 1px solid #181e26;
 	border-radius:5px;
 	box-sizing:border-box;
@@ -26,16 +29,17 @@ ul{
 }
 
 li{
+	height:$listItemHeight;
 	line-height:$listItemHeight;
-	vertical-align:center;
-	box-sizing:border-box;
 	padding-left:10px;
 	border-top:1px solid #4a4e5a;
 	border-bottom:1px solid #1e2127;
 	text-shadow:1px 1px #2a2d35;
 	//actual background, without gradient
 	// background:#383d49;
+	background: -webkit-linear-gradient(#767c8a,#505666);
 	background:linear-gradient(#3c414d,#353a46);
+	// box-sizing:border-box;
 	&:last-child{
 		border-bottom:none;
 	}
@@ -63,22 +67,21 @@ a{
 	background-position: 0 12px;
 }
 
-
-
-
 .message-count{
+
 	float:right;
-	line-height:$listItemHeight/20;
-	margin-top:$listItemHeight/4;
-	margin-right:$listItemHeight/4;
-	//actual background, without gradient
-	// background:#464c5a;
-	padding:10px;
+	line-height:0;
+	margin:$listItemHeight/4;
+	padding:$listItemHeight/4;
 	border-radius:3px;
 	color:#a8c2d8;
 	text-shadow:1px 1px #2a2d35;
+	//actual background, without gradient
+	// background:#464c5a;
+	background: -webkit-linear-gradient(#767c8a,#505666);
 	background: linear-gradient(#767c8a,#505666);
 	font-size:0.6875em;
 	box-shadow: 0px 1px 3px #181e26;
+	box-sizing:border-box;
 
 }
