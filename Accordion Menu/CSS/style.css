@@ -8,6 +8,8 @@ nav {
   height: auto;
   top: 50%;
   margin-top: -175px;
+  left: 50%;
+  margin-left: -112.5px;
   border: 1px solid #181e26;
   border-radius: 5px;
   box-sizing: border-box;
@@ -24,10 +26,27 @@ li {
   border-top: 1px solid #4a4e5a;
   border-bottom: 1px solid #1e2127;
   text-shadow: 1px 1px #2a2d35;
-  background: linear-gradient(#3c414d, #353a46);
-  color: #c9d1e3; }
+  background: linear-gradient(#3c414d, #353a46); }
   li:last-child {
     border-bottom: none; }
+
+a {
+  background: url(../icons/sprite.png) no-repeat;
+  padding-left: 25px;
+  color: #c9d1e3;
+  display: block; }
+
+.profile {
+  background-position: 0 -117px; }
+
+.messages {
+  background-position: 0 -52px; }
+
+.settings {
+  background-position: 0 -183px; }
+
+.logout {
+  background-position: 0 12px; }
 
 .message-count {
   float: right;

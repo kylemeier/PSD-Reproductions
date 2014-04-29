@@ -2,6 +2,7 @@ $listItemHeight: 38px;
 //http://www.premiumpixels.com/freebies/accordion-style-navigation-psd/
 //font proximanova regular
 
+
 body{
 	background-color:#ccc;
 	font-size:1em;
@@ -13,8 +14,8 @@ nav{
 	height:auto;
 	top:50%;
 	margin-top:-175px;
-	// left:50%;
-	// margin-left:-112.5px;
+	left:50%;
+	margin-left:-112.5px;
 	border: 1px solid #181e26;
 	border-radius:5px;
 	box-sizing:border-box;
@@ -26,7 +27,6 @@ ul{
 
 li{
 	line-height:$listItemHeight;
-	// height:$listItemHeight;
 	vertical-align:center;
 	box-sizing:border-box;
 	padding-left:10px;
@@ -36,19 +36,35 @@ li{
 	//actual background, without gradient
 	// background:#383d49;
 	background:linear-gradient(#3c414d,#353a46);
-
-
-	color:#c9d1e3;
-
 	&:last-child{
 		border-bottom:none;
 	}
 }
+a{
+	background: url(../icons/sprite.png) no-repeat;
+	padding-left:25px;
+	color:#c9d1e3;
+	display:block;
+}
 
-//icon gradients --
-// background: linear-gradient(#c8d3df,#9caec4);
-// -webkit-background-clip:text;
-// -webkit-text-fill-color:transparent;
+.profile{
+	background-position: 0 -117px;
+}
+
+.messages{
+	background-position: 0 -52px;
+}
+
+.settings{
+	background-position: 0 -183px;
+}
+
+.logout{
+	background-position: 0 12px;
+}
+
+
+
 
 .message-count{
 	float:right;
