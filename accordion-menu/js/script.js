@@ -1,4 +1,4 @@
-$(document).on('click', '.messages',function(event){
+$(document).on('click', '.messages',function(){
 	$('.messages-slide').slideToggle('fast');
 	//****workaround for box shadows glitching in chrome when height is adjusted****//
 	var interval = setInterval(function(){
@@ -8,10 +8,10 @@ $(document).on('click', '.messages',function(event){
 			$('nav').removeClass('shadow-two');
 			$('nav').addClass('shadow');
 
-		},1)
-	},4);	
+		},1);
+	},4);
 	setTimeout(function(){
 		clearInterval(interval);
-	},500);
+	},600);
 	//****//
 });

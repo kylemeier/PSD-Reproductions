@@ -1,6 +1,5 @@
 //http://www.premiumpixels.com/freebies/accordion-style-navigation-psd/
 //correct font: proximanova regular (not free), went with a Google font I like instead
-//shadow glitches in chrome with slidetoggle
 
 $listItemHeight: 38px;
 $totalHeight: 159px;
@@ -51,9 +50,9 @@ li{
 	border-top:1px solid #4a4e5a;
 	border-bottom:1px solid #1e2127;
 	text-shadow:1px 1px #2a2d35;
-	//actual background, without gradient
-	// background:#383d49;
-	background: -webkit-linear-gradient(#767c8a,#505666);
+	background:#383d49;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3c414d), color-stop(100%,#353a46)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #3c414d 0%,#353a46 100%); /* Chrome10+,Safari5.1+ */
 	background:linear-gradient(#3c414d,#353a46);
 	box-sizing:border-box;
 	&:last-child{
@@ -130,9 +129,9 @@ span{
 	border-radius:3px;
 	color:#a8c2d8;
 	text-shadow:1px 1px #2a2d35;
-	//actual background, without gradient
-	// background:#464c5a;
-	background: -webkit-linear-gradient(#767c8a,#505666);
+	background:#464c5a;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#767c8a), color-stop(100%,#505666)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #767c8a 0%,#505666 100%); /* Chrome10+,Safari5.1+ */
 	background: linear-gradient(#767c8a,#505666);
 	font-size:0.6875em;
 	box-shadow: 0px 1px 3px #181e26;
