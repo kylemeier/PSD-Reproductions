@@ -1,3 +1,4 @@
+/*correct font: proximanova regular (not free), went with a Google font I like instead*/
 body {
   font-family: 'Oxygen', 'sans-serif';
   background-color: #ccc;
@@ -21,12 +22,14 @@ nav {
     display: inline;
     overflow: hidden; }
 
+/*workaround for box shadows glitching in chrome when height is adjusted*/
 .shadow {
   box-shadow: 0 0 20px black; }
 
 .shadow-two {
   box-shadow: 0 0 21px black; }
 
+/**/
 .nav-items {
   height: 100%;
   position: relative; }
@@ -49,7 +52,9 @@ li {
 .messages-slide {
   display: none;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  /*inset box-shadow not working directly, workaround:*/
+  /**/ }
   .messages-slide:before {
     content: "";
     position: absolute;

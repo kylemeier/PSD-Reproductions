@@ -1,5 +1,5 @@
 //http://www.premiumpixels.com/freebies/accordion-style-navigation-psd/
-//correct font: proximanova regular (not free), went with a Google font I like instead
+/*correct font: proximanova regular (not free), went with a Google font I like instead*/
 
 $listItemHeight: 38px;
 $totalHeight: 159px;
@@ -31,7 +31,7 @@ nav{
 	}
 }
 
-//****workaround for box shadows glitching in chrome when height is adjusted****//
+/*workaround for box shadows glitching in chrome when height is adjusted*/
 .shadow{
 	box-shadow: 0 0 20px rgba(0,0,0,1);
 }
@@ -39,7 +39,7 @@ nav{
 .shadow-two{
 	box-shadow: 0 0 21px rgba(0,0,0,1);
 }
-//****//
+/**/
 
 .nav-items{
 	height:100%;
@@ -64,7 +64,7 @@ li{
 	display:none;
 	position: relative;
 	width:100%;	
-	//***inset box-shadow not working directly, workaround:***//
+	/*inset box-shadow not working directly, workaround:*/
 	&:before{
 		content:"";
     	position: absolute;
@@ -75,7 +75,7 @@ li{
     	box-shadow: inset 0 0 5px rgba(0,0,0,.55);
     	pointer-events: none;
 	}
-	//***//
+	/**/
 	li{
 		background:#222931;	
 		color:#404c57;
