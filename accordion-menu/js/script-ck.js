@@ -1,0 +1,1 @@
+$(document).on("click",".messages",function(e){$(".messages-slide").slideToggle("fast");var t=setInterval(function(){$("nav").removeClass("shadow");$("nav").addClass("shadow-two");setTimeout(function(){$("nav").removeClass("shadow-two");$("nav").addClass("shadow")},1)},4);setTimeout(function(){clearInterval(t)},500)});

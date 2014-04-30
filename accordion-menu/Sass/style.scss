@@ -1,5 +1,6 @@
 //http://www.premiumpixels.com/freebies/accordion-style-navigation-psd/
 //correct font: proximanova regular (not free), went with a Google font I like instead
+//shadow glitches in chrome with slidetoggle
 
 $listItemHeight: 38px;
 $totalHeight: 159px;
@@ -17,21 +18,36 @@ nav{
 	height:auto;
 	top:50%;
 	margin-top:-$totalHeight/2;
-	// left:50%;
-	// margin-left:-$totalWidth/2;
+	left:50%;
+	margin-left:-$totalWidth/2;
 	border: 1px solid #181e26;
 	border-radius:5px;
 	box-sizing:border-box;
-	box-shadow: 1px 1px 5px #181e26,-1px -1px 5px #181e26;
-}
-ul{
-	height:100%;
+	overflow:hidden;
+	&:after{
+		content: " ";
+		font-size: 1px;
+		display: inline;
+		overflow: hidden;
+	}
 }
 
+//****workaround for box shadows glitching in chrome when height is adjusted****//
+.shadow{
+	box-shadow: 0 0 20px rgba(0,0,0,1);
+}
+
+.shadow-two{
+	box-shadow: 0 0 21px rgba(0,0,0,1);
+}
+//****//
+
+.nav-items{
+	height:100%;
+	position:relative;
+}
 li{
-	height:$listItemHeight;
 	line-height:$listItemHeight;
-	padding-left:10px;
 	border-top:1px solid #4a4e5a;
 	border-bottom:1px solid #1e2127;
 	text-shadow:1px 1px #2a2d35;
@@ -39,36 +55,74 @@ li{
 	// background:#383d49;
 	background: -webkit-linear-gradient(#767c8a,#505666);
 	background:linear-gradient(#3c414d,#353a46);
-	// box-sizing:border-box;
+	box-sizing:border-box;
 	&:last-child{
 		border-bottom:none;
 	}
 }
-a{
+
+.messages-slide{
+	display:none;
+	position: relative;
+	width:100%;	
+	//***inset box-shadow not working directly, workaround:***//
+	&:before{
+		content:"";
+    	position: absolute;
+    	left: 0px;
+    	top: 0px;
+    	right: 0px;
+    	bottom: 0px;
+    	box-shadow: inset 0 0 5px rgba(0,0,0,.55);
+    	pointer-events: none;
+	}
+	//***//
+	li{
+		background:#222931;	
+		color:#404c57;
+		border:none;
+		width:100%;	
+	}
+	a{
+		background:none;
+		color:#778ea1;
+		padding:0;
+	}
+	span{
+		margin-left:15px;
+		padding-left:20px;
+		font-size:0.8125em;
+		color:#778ea1;
+		text-shadow:1px 1px #000;
+	}
+}
+
+span{
 	background: url(../icons/sprite.png) no-repeat;
 	padding-left:25px;
 	color:#c9d1e3;
 	display:block;
+	margin-left:10px;
 }
-
 .profile{
 	background-position: 0 -117px;
 }
-
 .messages{
 	background-position: 0 -52px;
 }
-
 .settings{
 	background-position: 0 -183px;
 }
-
 .logout{
-	background-position: 0 12px;
+	background-position: 0 11px;
+}
+.subitem{
+	background-position: 0 -243px;
+	
+	
 }
 
 .message-count{
-
 	float:right;
 	line-height:0;
 	margin:$listItemHeight/4;
@@ -83,5 +137,4 @@ a{
 	font-size:0.6875em;
 	box-shadow: 0px 1px 3px #181e26;
 	box-sizing:border-box;
-
 }

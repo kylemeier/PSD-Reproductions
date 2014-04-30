@@ -9,12 +9,20 @@
         <link rel='stylesheet' href='css/style.css' >
 </head>
 <body>
-	<nav>
-		<ul>
-			<li><a href="#" class="profile">Profile</a></li>
-			<li><a href="#" class="messages">Messages <span class="message-count">32</span></a></li>
-			<li><a href="#" class="settings">Settings</a></li>
-			<li><a href="#" class="logout">Log out</a></li>
+	<nav class="shadow">
+		<ul class="nav-items">
+			<li><a href="#"><span class="profile">Profile</span></a></li>
+			<li><a href="#"><span class="messages">Messages<span class="message-count">32</span></span></a>
+				<ul class="messages-slide hide">
+					<li><a href="#"><span class="subitem">Inbox</span></a></li>
+					<li><a href="#"><span class="subitem">Sent</span></a></li>
+					<li><a href="#"><span class="subitem">Drafts</span></a></li>
+				</ul>
+			</li>
+			<li><a href="#"><span class="settings">Settings</span></a></li>
+			<li><a href="#"><span class="logout">Log out</span></a></li>
 		</ul>
 	</nav>
+	<script src='//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js'></script>
+	<script src="js/script.js"></script>
 </body>
