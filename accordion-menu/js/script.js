@@ -1,5 +1,5 @@
 $(document).on('click', '.messages',function(){
-	$('.messages-slide').slideToggle('fast');
+	$('.messages-slide').stop(true,false).slideToggle('fast');
 	//****workaround for box shadows glitching in chrome when height is adjusted****//
 	var interval = setInterval(function(){
 		$('nav').removeClass('shadow');
